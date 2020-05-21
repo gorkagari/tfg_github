@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <table id="table2">
+        <tr>
+            <td>
+                <a href="/">Atzera</a>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <p>Aukeratu zure aplikaziorako nahi dituzun aukerak.</p>
+    <br><br>
+        <form action="/download" method="post">{% csrf_token %}
+            <table id="table3">
+                <tr class="tr1"><td>
+                    <input type="checkbox" checked disabled>Kontu sorketa/saio hasieraketa arrunta</input>
+                </td></tr>
+                <tr class="tr1"><td>
+                    <input type="checkbox" name="google_opt">Googlen saio hasieraketa</input>
+                </td></tr>
+                 <tr class="tr1"><td>
+                    <input type="submit" value="Kodea eskuratu">
+                </td></tr>
+            </table>
+        </form>
+
+{% endblock %}

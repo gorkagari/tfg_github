@@ -1,0 +1,43 @@
+Text you have to add is represented between '<' and '>' (don't add the symbols into the code).
+
+########## 'settings.py' ##########
+
+	- Add in INSTALLED_APPS section:
+		<
+		'django.contrib.sites',
+		'allauth',
+		'allauth.account',
+		'allauth.socialaccount',
+		'allauth.socialaccount.providers.google',
+		>
+
+	- Add in TEMPLATES section, context_processors list:
+		<
+		'django.template.context_processors.request',
+		>
+
+	- Add new section AUTHENTICATION_BACKENDS:
+		<
+		AUTHENTICATION_BACKENDS = (
+			'django.contrib.auth.backends.ModelBackend',
+			'allauth.account.auth_backends.AuthenticationBackend’,
+		)
+		>
+
+	- Add SITE_ID:
+		<
+		SITE_ID = 1
+		>
+
+########## 'urls.py' ##########
+
+	-Add in the 'urlpatterns' list:
+		<
+		path('accounts/', include('allauth.urls')),
+		>
+
+########## MIGRATE THE DB ##########
+
+	Execute 'py manage.py migrate' in the command line.
+
+

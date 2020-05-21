@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <table id="table2">
+        <tr>
+            <td>
+                <a href="/">Atzera</a>
+            </td>
+        </tr>
+    </table>
+    <br>
+
+    <p>Nahi dituzun aukerak egin ahal izateko, hona hemen aukeretako bakoitzak dituen aurrebaldintzak.</p>
+    <br><br>
+    <div style="background-color:lightgrey">
+        <dl>
+            <dt style="text-align:center"><h2>Instalatu django-allauth liburutegia (Nahitaezkoa)</h2></dt>
+            <br>
+
+            <dt><b>- Exekutatu <i>pip install django-allauth</i> komandoa komando-lerroan.</b></dt>
+            <br>
+
+            <dt><h2>'settings.py' fitxategian:</h2></dt>
+
+            <ul>
+                <li>
+                    <dt><h4><i>INSTALLED_APPS</i> atalean, gehitu hurrengo lerroak:</h4></dt>
+                    <dd>'django.contrib.sites',</dd>
+                    <dd>'allauth',</dd>
+                    <dd>'allauth.account',</dd>
+                    <dd>'allauth.socialaccount',</dd>
+                </li>
+
+                <li>
+                    <dt><h4><i>TEMPLATES</i> atalean, <i>context_processors</i> zerrendan, ez balego gehitu lerro hau:</h4></dt>
+                    <dd>'django.template.context_processors.request',</dd>
+                </li>
+
+                <li>
+                    <dt><h4><i>AUTHENTICATION_BACKENDS</i> atala gehitu, hurrengo edukiarekin:</h4></dt>
+                    <dd>AUTHENTICATION_BACKENDS = (</dd>
+                    <dd>'django.contrib.auth.backends.ModelBackend',</dd>
+                    <dd>'allauth.account.auth_backends.AuthenticationBackend’,</dd>
+                    <dd>)</dd>
+                </li>
+
+                <li>
+                    <dt><h4>SITE_ID aldagaia gehituko:</h4></dt>
+                    <dd>SITE_ID = 1</dd>
+                </li>
+            </ul>
+            <br>
+
+            <dt><h2>'urls.py' fitxategian:</h2></dt>
+
+            <ul>
+                <li>
+                    <dt><h4><i>urlspatterns</i> zerrendan gehitu:</h4></dt>
+                    <dd>path('accounts/', include('allauth.urls')),</dd>
+                </li>
+            </ul>
+            <dt><h2>Instalazioarekin bukatzeko, datu-basea migratu:</h2></dt>
+            <dd>- Komando-lerroan, exekutatu <i>py manage.py migrate</i></dd>
+        </dl>
+        <br>
+    </div>
+
+
+{% endblock %}
