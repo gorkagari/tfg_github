@@ -16,7 +16,8 @@ def aurrebaldintzak(request):
         return render(request, 'core/aurrebaldintzak.html')
 
 def download(request):
-        if "google_opt" in request.POST:
+        # ONLY GOOGLE HAS BEEN CHOSEN
+        if ("google_opt" in request.POST) and not("twitter_opt" in request.POST) and not("github_opt" in request.POST):
                 r = requests.get(
                         'https://raw.githubusercontent.com/gorkagari/tfg_github/master/google_auth.txt')
                 filename = "google_auth.txt"
@@ -24,7 +25,61 @@ def download(request):
                 response = HttpResponse(content, content_type='text/plain')
                 response['Content-Disposition'] = 'attachment; filename={0}'.format(filename)
                 return response
-       
+        # ONLY TWITTER HAS BEEN CHOSEN
+        elif not("google_opt" in request.POST) and ("twitter_opt" in request.POST) and not("github_opt" in request.POST):
+                r = requests.get(
+                        'https://raw.githubusercontent.com/gorkagari/tfg_github/master/google_auth.txt')
+                filename = "google_auth.txt"
+                content = r.text
+                response = HttpResponse(content, content_type='text/plain')
+                response['Content-Disposition'] = 'attachment; filename={0}'.format(filename)
+                return response
+        # ONLY GITHUB HAS BEEN CHOSEN
+        elif not("google_opt" in request.POST) and not("twitter_opt" in request.POST) and ("github_opt" in request.POST):
+                r = requests.get(
+                        'https://raw.githubusercontent.com/gorkagari/tfg_github/master/google_auth.txt')
+                filename = "google_auth.txt"
+                content = r.text
+                response = HttpResponse(content, content_type='text/plain')
+                response['Content-Disposition'] = 'attachment; filename={0}'.format(filename)
+                return response
+        # GOOGLE AND TWITTER HAVE BEEN CHOSEN
+        elif ("google_opt" in request.POST) and ("twitter_opt" in request.POST) and not("github_opt" in request.POST):
+                r = requests.get(
+                        'https://raw.githubusercontent.com/gorkagari/tfg_github/master/google_auth.txt')
+                filename = "google_auth.txt"
+                content = r.text
+                response = HttpResponse(content, content_type='text/plain')
+                response['Content-Disposition'] = 'attachment; filename={0}'.format(filename)
+                return response
+        # GOOGLE AND GITHUB HAVE BEEN CHOSEN
+        elif ("google_opt" in request.POST) and not("twitter_opt" in request.POST) and ("github_opt" in request.POST):
+                r = requests.get(
+                        'https://raw.githubusercontent.com/gorkagari/tfg_github/master/google_auth.txt')
+                filename = "google_auth.txt"
+                content = r.text
+                response = HttpResponse(content, content_type='text/plain')
+                response['Content-Disposition'] = 'attachment; filename={0}'.format(filename)
+                return response
+        # TWITTER AND GITHUB HAVE BEEN CHOSEN
+        elif not("google_opt" in request.POST) and ("twitter_opt" in request.POST) and ("github_opt" in request.POST):
+                r = requests.get(
+                        'https://raw.githubusercontent.com/gorkagari/tfg_github/master/google_auth.txt')
+                filename = "google_auth.txt"
+                content = r.text
+                response = HttpResponse(content, content_type='text/plain')
+                response['Content-Disposition'] = 'attachment; filename={0}'.format(filename)
+                return response
+        # GOOGLE, TWITTER AND GITHUB HAVE BEEN CHOSEN
+        elif ("google_opt" in request.POST) and ("twitter_opt" in request.POST) and (
+                                "github_opt" in request.POST):
+                r = requests.get(
+                        'https://raw.githubusercontent.com/gorkagari/tfg_github/master/google_auth.txt')
+                filename = "google_auth.txt"
+                content = r.text
+                response = HttpResponse(content, content_type='text/plain')
+                response['Content-Disposition'] = 'attachment; filename={0}'.format(filename)
+                return response
         else:
                 r = requests.get('https://raw.githubusercontent.com/gorkagari/tfg_github/master/auth.txt')
                 filename = "auth.txt"
