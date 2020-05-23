@@ -1,4 +1,8 @@
+from django.http import HttpResponse
 from django.shortcuts import render
+from django.core.files.base import ContentFile
+import requests
+from os import getcwd
 
 # Create your views here.
 
@@ -13,6 +17,18 @@ def aurrebaldintzak(request):
 
 def download(request):
         if "google_opt" in request.POST:
-                return render(request, 'core/google_download.html')
+                r = requests.get(
+                        'https://raw.githubusercontent.com/gorkagari/tfg_github/master/google_auth.txt')
+                filename = "google_auth.txt"
+                content = r.text
+                response = HttpResponse(content, content_type='text/plain')
+                response['Content-Disposition'] = 'attachment; filename={0}'.format(filename)
+                return response
+       
         else:
-                return render(request, 'core/download.html')
+                r = requests.get('https://raw.githubusercontent.com/gorkagari/tfg_github/master/auth.txt')
+                filename = "auth.txt"
+                content = r.text
+                response = HttpResponse(content, content_type='text/plain')
+                response['Content-Disposition'] = 'attachment; filename={0}'.format(filename)
+                return response
