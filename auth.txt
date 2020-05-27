@@ -1,3 +1,21 @@
 ############################
 --------SAIO NORMAL KODEA--------
 ############################
+
+Erabili hurrengo estekak zure kodean nahi duzun moduan, eta jarri martxan aplikazioa!
+
+Saio-haste arruntaren orrirako esteka → /accounts/login/
+
+Kontu-sortze orrirako esteka → /accounts/signup/
+
+Identifikazio hornitzaileekiko konexioak kudeatzeko esteka → /accounts/social/connections/
+
+Pasahitz-aldatze orrirako esteka → /accounts/password/change/
+
+Saioa ixteko esteka → /accounts/logout/
+
+SETTINGS.PY fitxategian deklaratu konstante hauek saio-hasieraketa eta saio-ixketetarako:
+
+LOGIN_REDIRECT_URL = "/saioa_hastean_nahi_dugun_helbidea_(home_adibidez)"
+
+LOGOUT_URL = "/saioa_ixtean_nahi_dugun_helbidea_(index_adibidez)"

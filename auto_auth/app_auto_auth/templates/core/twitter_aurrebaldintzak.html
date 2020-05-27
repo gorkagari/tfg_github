@@ -27,7 +27,11 @@
 
    <br>
     </div>
-    <div style="background-color:lightgrey">
+    <div style="background-color:lightgrey;
+                text-align:center;display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 40%;">
          <dl>
             <dt style="text-align:center"><h2>Twitterren saio-hasieraketa inplementatzeko aurrebaldintzak</h2></dt>
             <br>
@@ -35,6 +39,9 @@
                 <li>
                     <dt> <b>Jo <a href="https://developer.twitter.com/en/apps">Twitter Developersera </a> eta hasi saioa zure Twitter kontuarekin (konturik ez badaukazu sor ezazu bat). </b></dt>
                      <br>
+                    {% load static %}
+                    <img id="img_tw_1" src="{% static 'app_auto_auth/twitter1.png' %}"/>
+                    <br>
                 </li>
                 <li>
                     <dt> <b>Aplikazioen atalean, sor ezazu aplikazio berri bat <i>"Create an app"</i> botoian klikatuz.</b></dt>
@@ -70,6 +77,9 @@
                  <li>
                      <dt> <b> Orain proiektua sortuta daukagula <i>"Keys and Tokens"</i> atalean <i>"API Key"</i> eta <i>"API secret key"</i> ditugu eskuragarri.</b></dt>
                     <br>
+                </li>
+                <li>
+                    <dt><b>Bukatzeko, zure proiektuaren <i>SETTINGS.PY</i> fitxategian, <i>INSTALLED_APPS</i> zerrendan, gehitu <i>'allauth.socialaccount.providers.twitter',</i> eta exekutatu <i>py manage.py migrate</i> komando lerroan.</b></dt>
                 </li>
             </ul>
 
