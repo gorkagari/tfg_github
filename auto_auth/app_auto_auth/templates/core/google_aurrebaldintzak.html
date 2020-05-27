@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<p>Nahi dituzun aukerak egin ahal izateko, hona hemen aukeretako bakoitzak dituen aurrebaldintzak.</p><br>
+
+    <table id="table4">
+        <tr>
+            <td>
+                <a href="/aurrebaldintzak">Nahitaezko aurrebaldintzak</a>
+            </td>
+             <td>
+                <a href="/twitter_aurrebaldintzak">Twitter aurrebaldintzak</a>
+            </td>
+             <td>
+                <a href="/github_aurrebaldintzak">GitHub aurrebaldintzak</a>
+            </td>
+        </tr>
+    </table>
+    <table id="table2">
+        <tr>
+            <td>
+                <a href="/">Atzera</a>
+            </td>
+        </tr>
+    </table>
+    <br>
+
+
+    <br><br>
+    </div>
+    <div style="background-color:lightgrey">
+         <dl>
+            <dt style="text-align:center"><h2>Googlen saio-hasieraketa inplementatzeko aurrebaldintzak</h2></dt>
+            <br>
+            <ul>
+                <li>
+                    <dt> <b>Jo <a href="https://console.developers.google.com/apis/dashboard">Google Console Developersera </a> eta hasi saioa zure Google kontuarekin (konturik ez badaukazu sor ezazu bat). </b></dt>
+                     <br>
+                </li>
+                <li>
+                    <dt> <b>Egin klik pantailaren goi-ezkerraldean dagoen desplegablean, eta sortu proiektu berri bat.</b></dt>
+                    <br>
+                </li>
+                 <li>
+                     <dt> <b>Behin proiektua sortuta, bere <i>"Pantalla de consentimiento"</i> atalean sartu eta <i>"Externo"</i> aukeratuko dugu. Ondoren egin klik <i>"Crear"</i> botoian.</b></dt>
+                    <br>
+                </li>
+
+                <li>
+                     <dt> <b>Formulario bat aurkeztuko zaigu, hurrengo datuak bete beharko ditugu:</b></dt>
+                    <br>
+                    <ul>
+                        <li>
+                            <dd><b><i>“Nombre de aplicación”:</i></b> Gure aplikazioari eman nahi diogun izena.</dd>
+                        </li>
+                         <br>
+                        <li>
+                            <dd><b><i>“Logotipo de la aplicación”:</i></b> Aplikazioaren irudia/logoa.</dd>
+                        </li> <br>
+                        <li>
+                            <dd><b><i>“Correo electrónico de asistencia”:</i></b> Gure korreoa idatziko dugu.</dd>
+                        </li> <br>
+                        <li>
+                            <dd><b><i>“Permisos para acceder a las API de Google”:</i></b> Zerbitzuak erabiltzaileei eskatuko dizkien datu pribatuak.</dd>
+                        </li> <br>
+                        <li>
+                            <dd><b><i>“Dominios autorizados”:</i></b> Aplikazioak baimenduko dituen domeinuak.</dd>
+                        </li> <br>
+                        <li>
+                            <dd><b><i>“Enlace a la página principal de la aplicación”:</i></b> Gure web aplikazioaren indize orrirako linka.</dd>
+                        </li> <br>
+                        <li>
+                            <dd><b><i>“Enlace a la política de privacidad de la aplicación”:</i></b> Gure web aplikazioaren pribatutasun politikarako linka.</dd>
+                        </li> <br>
+                        <li>
+                            <dd><b><i>“Enlace a las condiciones del servicio de la aplicación”:</i></b> (Aukerakoa) Gure web aplikazioaren erabiltze baldintzetarako linka.</dd>
+                        </li> <br>
+                    </ul>
+                    <br>
+                </li>
+                <li>
+                    <dt> <b>Orain <i>"Credenciales"</i> atalera jo behar dugu, eta bertan <i>"Crear credenciales"</i> botoia klikatu. Ematen zaizkigun aukeretatik <i>"ID de cliente de OAuth"</i> aukeratu.</b></dt>
+                    <br>
+                </li>
+                <li>
+                    <dt><b>Orri berri bat aurkeztuko zaigu aukera gehiagorekin. <i>"Tipo de aplicación"</i> atalean <i>Web</i> aukeratu. Izen bat eman eta <i>“URLs de redirección autorizados”</i> atalean  <i>http://zuredomeinua:8000/accounts/google/login/callback/</i> esteka idatzi. Amaitzeko egin klik <i>"Crear"</i> botoian.</b></dt>
+                </li>
+                <br>
+                <li>
+                    <dt><b>Badago, sortutako kredentzialetan behar ditugun <i>bezero IDa</i> eta <i>bezeroaren sekretua</i> ditugu, hauek izango dira gure kodean APIa inplementatzean identifikatuko gaituzten gakoak. </b></dt>
+                </li>
+            </ul>
+
+
+         </dl>
+    </div>
+
+
+{% endblock %}

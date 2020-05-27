@@ -1,6 +1,21 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<p>Nahi dituzun aukerak egin ahal izateko, hona hemen aukeretako bakoitzak dituen aurrebaldintzak.</p>
+    <br>
+    <table id="table4">
+        <tr>
+            <td>
+                <a href="/google_aurrebaldintzak">Google aurrebaldintzak</a>
+            </td>
+             <td>
+                <a href="/twitter_aurrebaldintzak">Twitter aurrebaldintzak</a>
+            </td>
+             <td>
+                <a href="/github_aurrebaldintzak">GitHub aurrebaldintzak</a>
+            </td>
+        </tr>
+    </table>
     <table id="table2">
         <tr>
             <td>
@@ -10,8 +25,7 @@
     </table>
     <br>
 
-    <p>Nahi dituzun aukerak egin ahal izateko, hona hemen aukeretako bakoitzak dituen aurrebaldintzak.</p>
-    <br><br>
+    <br>
     <div style="background-color:lightgrey">
         <dl>
             <dt style="text-align:center"><h2>Instalatu django-allauth liburutegia (Nahitaezkoa)</h2></dt>
@@ -63,7 +77,7 @@
             <dd>- Komando-lerroan, exekutatu <i>py manage.py migrate</i></dd>
         </dl>
         <br>
-    </div>
+
 
 
 {% endblock %}

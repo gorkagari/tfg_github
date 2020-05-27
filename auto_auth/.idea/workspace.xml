@@ -28,10 +28,16 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app_auto_auth/templates/core" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\gorka\Desktop\tfg_github\auto_auth\app_auto_auth\templates\core" />
+      <recent name="C:\Users\gorka\Desktop\tfg_github\auto_auth\app_auto_auth\templates" />
+      <recent name="C:\Users\gorka\Desktop\tfg_github\auto_auth\app_auto_auth\img" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\gorka\Desktop\tfg_github\auto_auth\app_auto_auth\templates\core" />
       <recent name="C:\Users\gorka\Desktop\TFG\auto_auth\app_auto_auth\templates\core" />
     </key>
   </component>
@@ -49,9 +55,9 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="977" y="525" key="com.intellij.ide.util.TipDialog" timestamp="1590245136227">
+    <state x="977" y="525" key="com.intellij.ide.util.TipDialog" timestamp="1590489727276">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="977" y="525" key="com.intellij.ide.util.TipDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1590245136227" />
+    <state x="977" y="525" key="com.intellij.ide.util.TipDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1590489727276" />
   </component>
 </project>

@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<p>Nahi dituzun aukerak egin ahal izateko, hona hemen aukeretako bakoitzak dituen aurrebaldintzak.</p>
+    <br>
+    <table id="table4">
+        <tr>
+            <td>
+                <a href="/aurrebaldintzak">Nahitaezko aurrebaldintzak</a>
+            </td>
+             <td>
+                <a href="/google_aurrebaldintzak">Google aurrebaldintzak</a>
+            </td>
+             <td>
+                <a href="/twitter_aurrebaldintzak">Twitter aurrebaldintzak</a>
+            </td>
+        </tr>
+    </table>
+    <table id="table2">
+        <tr>
+            <td>
+                <a href="/">Atzera</a>
+            </td>
+        </tr>
+    </table>
+    <br>
+
+    <br>
+    </div>
+    <div style="background-color:lightgrey">
+         <dl>
+            <dt style="text-align:center"><h2>GitHuben saio-hasieraketa inplementatzeko aurrebaldintzak</h2></dt>
+            <br>
+            <ul>
+                <li>
+                    <dt> <b>Jo <a href="https://github.com/settings/applications">GitHubera </a> eta hasi saioa zure GitHub kontuarekin (konturik ez badaukazu sor ezazu bat). </b></dt>
+                     <br>
+                </li>
+                <li>
+                    <dt> <b>Behin saioa hasita, egin klik zure perfil irudian eta joan <i>"Developer settings"</i> atalera. Bertan aukeratu <i>"OAuth Apps"</i> sekzioa eta egin klik <i>"New OAuth App"</i> botoian".</b></dt>
+                    <br>
+                </li>
+                 <li>
+                    <dt> <b>Formulario bat aurkeztuko zaigu, non nahitaez hurrengo atalak bete beharko ditugun:</b></dt>
+                    <br>
+                     <br>
+                    <ul>
+                        <li>
+                            <dd><b><i>“Application name”:</i></b> Gure aplikazioari eman nahi diogun izena.</dd>
+                        </li>
+                         <br>
+                        <li>
+                            <dd><b><i>“Homepage URL”:</i></b>Web aplikazioaren URL helbidea.</dd>
+                        </li> <br>
+                        <li>
+                            <dd><b><i>“Authorization callback URL”:</i></b> Idatzi <i>http://zuredomeinua:8000/accounts/github/login/callback/</i> esteka.</dd>
+                        </li> <br>
+                    </ul>
+                    <br>
+                </li>
+                 <li>
+                     <dt> <b> Orain proiektua sortuta daukagula, bere <i>"Client ID"</i> eta <i>"Client Secret"</i> ditugu eskuragarri.</b></dt>
+                    <br>
+                </li>
+            </ul>
+
+
+         </dl>
+    </div>
+
+
+{% endblock %}

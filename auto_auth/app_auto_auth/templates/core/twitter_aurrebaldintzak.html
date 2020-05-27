@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{% block content %}
+ <p>Nahi dituzun aukerak egin ahal izateko, hona hemen aukeretako bakoitzak dituen aurrebaldintzak.</p>
+    <br>
+    <table id="table4">
+        <tr>
+            <td>
+                <a href="/aurrebaldintzak">Nahitaezko aurrebaldintzak</a>
+            </td>
+             <td>
+                <a href="/google_aurrebaldintzak">Google aurrebaldintzak</a>
+            </td>
+             <td>
+                <a href="/github_aurrebaldintzak">GitHub aurrebaldintzak</a>
+            </td>
+        </tr>
+    </table>
+    <table id="table2">
+        <tr>
+            <td>
+                <a href="/">Atzera</a>
+            </td>
+        </tr>
+    </table>
+    <br>
+
+   <br>
+    </div>
+    <div style="background-color:lightgrey">
+         <dl>
+            <dt style="text-align:center"><h2>Twitterren saio-hasieraketa inplementatzeko aurrebaldintzak</h2></dt>
+            <br>
+            <ul>
+                <li>
+                    <dt> <b>Jo <a href="https://developer.twitter.com/en/apps">Twitter Developersera </a> eta hasi saioa zure Twitter kontuarekin (konturik ez badaukazu sor ezazu bat). </b></dt>
+                     <br>
+                </li>
+                <li>
+                    <dt> <b>Aplikazioen atalean, sor ezazu aplikazio berri bat <i>"Create an app"</i> botoian klikatuz.</b></dt>
+                    <br>
+                </li>
+                 <li>
+                    <dt> <b>Formulario bat aurkeztuko zaigu, non nahitaez hurrengo atalak bete beharko ditugun:</b></dt>
+                    <br>
+                     <br>
+                    <ul>
+                        <li>
+                            <dd><b><i>“App name”:</i></b> Gure aplikazioari eman nahi diogun izena.</dd>
+                        </li>
+                         <br>
+                        <li>
+                            <dd><b><i>“Application description”:</i></b> Aplikazioaren deskribapena.</dd>
+                        </li> <br>
+                        <li>
+                            <dd><b><i>“Website URL”:</i></b>Web aplikazioaren URL helbidea.</dd>
+                        </li> <br>
+                        <li>
+                            <dd><b><i>“Allow this application to be used to sign in with Twitter”:</i></b> Kutxatxoan klikatu aukera baieztatzeko.</dd>
+                        </li> <br>
+                        <li>
+                            <dd><b><i>“Callback URLs”:</i></b> Idatzi <i>http://zuredomeinua:8000/accounts/twitter/login/callback/</i> esteka.</dd>
+                        </li> <br>
+                        <li>
+                            <dd><b><i>“Tell us how this app will be used”:</i></b> Zure aplikazioaren funtzionalitateen azalpen bat idatzi.</dd>
+                        </li> <br>
+                    </ul>
+                    <br>
+                </li>
+                 <li>
+                     <dt> <b> Orain proiektua sortuta daukagula <i>"Keys and Tokens"</i> atalean <i>"API Key"</i> eta <i>"API secret key"</i> ditugu eskuragarri.</b></dt>
+                    <br>
+                </li>
+            </ul>
+
+
+         </dl>
+    </div>
+
+
+{% endblock %}
